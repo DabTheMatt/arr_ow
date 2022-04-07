@@ -1,0 +1,89 @@
+.MainFrame {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    width: 863.22px;
+    padding: 10vh;
+    
+    
+}
+
+.GridBoard {
+    height: 700px;
+    width: 863.22px;
+    background: beige;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    background-image: url('./assets/images/mapka_1.jpg');
+    background-size: cover;
+    position: relative;
+
+}
+
+.default-ar {
+    height: 55.64px;
+    width: 55.64px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,0.1);
+    margin: 0;
+    opacity: 1;
+}
+
+.default-ar-over{
+    height: 55.64px;
+    width: 55.65px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,0.1);
+    margin: 0;
+    background: rgba(0,0,0,0.04);
+    
+}
+
+.default-ar-flow {
+    width: 500px;
+    height: 500px;
+    z-index: 2;
+    background: white;
+    position: absolute;
+    top: 10vh;
+    left: 15.6vw;
+    box-shadow: 0 0 100px 50px rgba(10,10,10,0.2);
+    border-radius: 10px;
+}
+
+.trasures-wrapper {
+    padding: 20px
+}
+
+.ar-coordinates {
+    color: black;
+    font-size: 10px;
+    opacity: 1;
+    position: relative;
+    top: 2px;
+    left: 5px;
+    width: 10px;
+    z-index: 3;
+}
+
+.close-ar {
+    content: "close";
+    position: relative;
+    left: 300px;
+    font-size: 18px;
+}
+
+.grid-wrapper {
+    position: relative;
+    top: 13.5px;
+    left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imageAr {
+    height: 100px;
+}
