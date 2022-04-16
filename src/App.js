@@ -1,11 +1,10 @@
 import './style.css';
-import MainFrame from './components/MainFrame';
-import { Data } from "./assets/data/data";
+import MapWrapper from './components/MapWrapper/MapWrapper';
 
 function App() {
   return (
     <div className="App">
-      <MainFrame />
+      <MapWrapper />
     </div>
   );
 }
