@@ -1,89 +1,98 @@
-.MainFrame {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 700px;
-    width: 863.22px;
-    padding: 10vh;
-    
-    
-}
-
-.GridBoard {
-    height: 700px;
-    width: 863.22px;
-    background: beige;
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    background-image: url('./assets/images/mapka_1.jpg');
-    background-size: cover;
-    position: relative;
-
-}
-
-.default-ar {
-    height: 55.64px;
-    width: 55.64px;
-    box-sizing: border-box;
-    border: 1px solid rgba(0,0,0,0.1);
-    margin: 0;
-    opacity: 1;
-}
-
-.default-ar-over{
-    height: 55.64px;
-    width: 55.65px;
-    box-sizing: border-box;
-    border: 1px solid rgba(0,0,0,0.1);
-    margin: 0;
-    background: rgba(0,0,0,0.04);
-    
-}
-
-.default-ar-flow {
-    width: 500px;
-    height: 500px;
-    z-index: 2;
-    background: white;
-    position: absolute;
-    top: 10vh;
-    left: 15.6vw;
-    box-shadow: 0 0 100px 50px rgba(10,10,10,0.2);
-    border-radius: 10px;
-}
-
-.trasures-wrapper {
-    padding: 20px
-}
-
-.ar-coordinates {
-    color: black;
+* {
     font-size: 10px;
-    opacity: 1;
-    position: relative;
-    top: 2px;
-    left: 5px;
-    width: 10px;
-    z-index: 3;
 }
 
-.close-ar {
-    content: "close";
-    position: relative;
-    left: 300px;
-    font-size: 18px;
+.map-wrapper {
+    width: 800px;
+    height: 800px;
+    background: url("./assets/images/mapka_1.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
 }
 
 .grid-wrapper {
-    position: relative;
-    top: 13.5px;
-    left: 20px;
     display: flex;
     flex-wrap: wrap;
+    gap: 1px;
 }
 
-.imageAr {
-    height: 100px;
+.ar-box {
+    height: 54.7px;
+    width: 54.7px;
+    background: transparent;
+    position: relative;
+    top: 14px;
+    left: 20px;
+    border-radius: 5px;
+}
+.ar-coord {
+    font-size: 10px;
+    padding: 5px;
+    color: grey;
+}
+
+.ar-box:hover {
+    box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.1);
+    background: rgba(0,200,100,0.1);
+    font-size: 12px !important;
+    color: black;
+    
+}
+
+.ar-under-blockade {
+    width: 100%;
+    height: 100%;
+    background: yellow;
+    position: fixed;
+    
+}
+
+.ar-popup {
+    width: 90%;
+    height: 70%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    opacity: 1;
+    z-index: 100;
+    padding: 20px;
+    box-shadow: 0px 0px 600px 600px rgba(0,0,0,0.4);
+    border-radius: 10px;
+    pointer-events: all;
+}
+
+.ar-enabled {
+    pointer-events: all;
+}
+
+.ar-close-btn {
+    position: fixed;
+    top: 3%;
+    left: 91.5%;
+    translate: (-50%, -50%);
+    background: black;
+    color: white;
+    font-size: 14px;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    z-index: 200;
+}
+
+.ar-close-btn:hover {
+    background: red;
+}
+
+.grid-blocker {
+    width: 100%;
+    height: 100%;
+    background: yellow;
+    pointer-events: none;
 }
