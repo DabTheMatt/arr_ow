@@ -17,11 +17,9 @@ class Ar extends Component {
         this.setState({
             enabled: true,
         });
-        console.log("over", this.props.index)
     }
 
     handleClick = (e) => {
-        console.log("e", e)
         this.props.click();
         
         this.setState({
@@ -31,11 +29,9 @@ class Ar extends Component {
             ar_clicked: !this.state.ar_clicked,
             enabled: true,
         })
-        console.log("clicked");
     }
 
     handleClose = () => {
-        console.log("handleClose")
         this.setState({
             ar_clicked: !this.state.ar_clicked,
         })
