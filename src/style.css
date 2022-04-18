@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+}
+
+.App {
+    min-height: 820px;
+}
+
+.map-wrapper {
+    width: 800px;
+    height: 800px;
+    background: url("./assets/images/mapka_1.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+}
+
+.ar-box {
+    height: 54.7px;
+    width: 54.7px;
+    background: transparent;
+    position: relative;
+    top: 14px;
+    left: 20px;
+    border-radius: 5px;
+}
+.ar-coord {
+    font-size: 10px;
+    padding: 5px;
+    color: grey;
+}
+
+.ar-box:hover {
+    box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.1);
+    background: rgba(131, 197, 190,0.1);
+    font-size: 12px !important;
+    color: black;
+    
+}
+
+.ar-under-blockade {
+    width: 100%;
+    height: 100%;
+    background: yellow;
+    position: fixed;
+    
+}
+
+.ar-popup {
+    width: 90%;
+    height: 70%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    opacity: 1;
+    z-index: 100;
+    padding: 20px;
+    box-shadow: 0px 0px 600px 600px rgba(0,0,0,0.4);
+    border-radius: 10px;
+    pointer-events: none;
+    animation-name: popup;
+    animation-duration: 0.2s;
+    overflow: auto;
+}
+
+@keyframes popup {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.ar-popdown {
+    width: 90%;
+    height: 70%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    opacity: 1;
+    z-index: 101;
+    padding: 20px;
+    box-shadow: 0px 0px 600px 600px rgba(0, 109, 119,0.4);
+    border-radius: 10px;
+    pointer-events: none;
+    animation-name: podown;
+    animation-duration: 0.2s;
+}
+
+@keyframes podown {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.ar-enabled {
+    pointer-events: all;
+}
+
+.ar-close-btn {
+    position: fixed;
+    top: 3%;
+    left: 91.5%;
+    translate: (-50%, -50%);
+    background: rgba(255, 221, 210,0.6);
+    color: black;
+    font-size: 14px;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    z-index: 200;
+    pointer-events: all;
+}
+
+.ar-close-btn:hover {
+    background: rgba(255, 221, 210,0.9);
+    color: black;
+}
+
+.grid-blocker {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    pointer-events: none;
+}
+
+.ar-title {
+    font-size: 32px;
+    line-height: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: rgb(0, 109, 119);
+    margin-top: 10px;
+}
+
+.ar-subtitle {
+    font-size: 28px;
+}
+
+.ar-item-name {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 40px;
+    text-transform: capitalize;
+    margin: 10px 0 10px 20px;
+}
+
+.main-subtitle {
+    text-align: center;
+    font-size: 18px;
+    line-height: 10px;
+    font-weight: lighter;
+    text-transform: capitalize;
+    padding: 20px
+}
+
+.main-arrows {
+    width: 40px;
+    height: 40px;
+    vertical-align: sub;
+    opacity: 0.5;
+}
+
+.main-title-wrapper {
+    margin: 10px auto;
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.main-green {
+    color: rgb(0, 109, 119);
+}
+
+.ar-item-image {
+    width: 100px;
+    height: auto;
+}
+
+.ar-line {
+    
+    border-top: 0.1px solid rgb(131, 197, 190, 0.3);
+}
